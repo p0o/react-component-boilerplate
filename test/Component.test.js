@@ -1,16 +1,12 @@
-import test from 'ava';
 import React from 'react';
+import test from 'ava';
 import { shallow } from 'enzyme';
 import Component from '../src/Component.js';
 
-test('Render component with defalut content', (t) => {
-    let content = Component.defaultProps.content;
-    let wrapper = shallow(<Component/>);
-    t.is(wrapper.text(), content);
-});
-
-test('Render component with specific content', (t) => {
-    let content = 'Hello World';
-    let wrapper = shallow(<Component content={ content }/>);
-    t.is(wrapper.text(), content);
+test('Render component', (t) => {
+    let click = () => {};
+    let wrapper = shallow(<Component click={ click } />);
+    t.is(wrapper.find('p').length, 2);
+    t.is(wrapper.find('p').at(0).text(), Component.defaultProps.content);
+    t.is(wrapper.find('p').at(1).text(), `clicks: ${Component.defaultProps.clicks}`);
 });
