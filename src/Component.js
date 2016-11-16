@@ -3,11 +3,14 @@ import styles from './Component.scss';
 
 export default class Component extends React.Component {
     static propTypes = {
-        content: React.PropTypes.string
+        content: React.PropTypes.string,
+        clicks: React.PropTypes.number,
+        click: React.PropTypes.func.isRequired
     }
 
     static defaultProps = {
-        content: 'A simple React component'
+        content: 'A simple React component',
+        clicks: 0
     }
 
     constructor(props) {
@@ -16,7 +19,10 @@ export default class Component extends React.Component {
 
     render() {
         return (
-            <div className={ styles.component } >{ this.props.content }</div>
+            <div className={ styles['component'] } onClick={ this.props.click } >
+                <p><b>{ this.props.content }</b></p>
+                <p>clicks: { this.props.clicks }</p>
+            </div>
         );
     }
 };
