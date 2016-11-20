@@ -4,7 +4,7 @@
   "description": "A simple boilerplate for React component development",
   "main": "./src/main.js",
   "scripts": {
-    "server": "webpack-dev-server --inline --hot --config webpack.config.dev.babel.js",
+    "server": "webpack-dev-server -d --inline --hot --config webpack.config.dev.babel.js",
     "test": "ava ./test",
     "test:watch": "ava --watch ./test",
     "coverage": "cross-env NODE_ENV=test nyc npm test",
