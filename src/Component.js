@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import styles from './Component.scss';
 
 export default class Component extends React.Component {
@@ -19,7 +20,7 @@ export default class Component extends React.Component {
 
     render() {
         return (
-            <div className={ styles['component'] } onClick={ this.props.click } >
+            <div className={ classNames(styles['component']) } onClick={ this.props.click } >
                 <p><b>{ this.props.content }</b></p>
                 <p>clicks: { this.props.clicks }</p>
             </div>
