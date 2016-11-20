@@ -1,6 +1,6 @@
 {
   "name": "react-component-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple boilerplate for React component development",
   "main": "./src/main.js",
   "scripts": {
