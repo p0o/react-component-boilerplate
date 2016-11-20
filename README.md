@@ -1,6 +1,6 @@
-# react-dev-boilerplate
+# React Component Boilerplate
 
-A simple boilerplate for React component development.
+> A simple boilerplate for React component development.
 
 ## Features
 
@@ -15,20 +15,20 @@ A simple boilerplate for React component development.
 * Setup
 
     ```
-    git clone https://github.com/xxxgo/react-dev-boilerplate.git your-project-name
+    git clone https://github.com/jeremyxgo/react-component-boilerplate.git your-project-name
     cd your-project-name
     npm install
     ```
     - Updating package name, version, description and author in `package.json`
-    - Updating filename in `./webpack.config.base.babel.js` and related file under `./src` to whatever you want.
+    - Updating component name in `./webpack.config.base.babel.js` and related file under `./src` to whatever you want.
 
-* Start dev server(live & HMR)
+* Start dev server(with LiveReload and HMR)
 
     ```
     npm run server
     ```
     - Open web browser and navigate to [http://localhost:3000](http://localhost:3000),
-    now you can see your changes without reloading afte you edit the files under `./src`
+    now you can see your changes without reloading after you edit the files under `./src`
 
 * Build(for production)
     ```
@@ -49,9 +49,9 @@ A simple boilerplate for React component development.
     ```
     npm run test:watch
     ```
-    - Test will run automatically when you edit any file under `./test`
+    - Test will run automatically when you edit any file under `./src` and `./test`
 
-* Coverage
+* Generate coverage report
     ```
     npm run coverage
     ```
