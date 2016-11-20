@@ -1,10 +1,10 @@
 {
-  "name": "react-dev-boilerplate",
-  "version": "0.0.2",
+  "name": "react-component-boilerplate",
+  "version": "0.0.3",
   "description": "A simple boilerplate for React component development",
   "main": "./src/main.js",
   "scripts": {
-    "server": "webpack-dev-server --inline --hot --config webpack.config.dev.babel.js",
+    "server": "webpack-dev-server -d --inline --hot --config webpack.config.dev.babel.js",
     "test": "ava ./test",
     "test:watch": "ava --watch ./test",
     "coverage": "cross-env NODE_ENV=test nyc npm test",
@@ -25,6 +25,7 @@
   "author": "Jeremy Go",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },

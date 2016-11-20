@@ -1,11 +1,26 @@
 import webpack from 'webpack';
-import config from './webpack.config.base.babel.js';
+import path from 'path';
+import config, { statics } from './webpack.config.base.babel.js';
 
 config.devtool = 'source-map';
+config.module.loaders.push(
+    {
+        test: /\.(css|scss)$/,
+        loader: 'style!css!sass?outputStyle=expanded',
+        include: path.join(__dirname, 'node_modules')
+    }
+);
+config.module.loaders.push(
+    {
+        test: /\.(css|scss)$/,
+        loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]!sass?outputStyle=expanded',
+        include: path.join(__dirname, statics.src)
+    }
+);
 config.plugins.push(
     new webpack.DefinePlugin({
         'process.env': {
-            NODE_ENV: JSON.stringify("production")
+            NODE_ENV: JSON.stringify('production')
         }
     })
 );
