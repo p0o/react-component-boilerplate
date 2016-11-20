@@ -1,41 +1,36 @@
 import webpack from 'webpack';
 import path from 'path';
 
-let filename = 'Component';
-let src = 'src';
-let dist = 'dist';
-let host = '0.0.0.0';
-let port = 3000;
+export let statics = {
+    src: 'src',
+    dist: 'dist',
+    componentName: 'Component'
+};
 
 let config = {
     entry: [
-        `./${src}/main.js`
+        `./${statics.src}/main.js`
     ],
     output: {
-        path: path.resolve(__dirname, dist),
-        publicPath: `/${dist}/`,
-        filename: `${filename}.js`
+        path: path.join(__dirname, statics.dist),
+        publicPath: `/${statics.dist}/`,
+        filename: `${statics.componentName}.js`
     },
     module: {
         loaders: [
-            { 
+            {
                 test: /\.(js|jsx)$/,
                 loader: 'react-hot!babel',
-                include: path.join(__dirname, src)
-            },
-            { 
-                test: /\.(css|scss)$/,
-                loader: 'style!css?modules&localIdentName=[name]-[local]-[hash:base64:5]!sass?outputStyle=expanded',
-                include: path.join(__dirname, src)
+                include: path.join(__dirname, statics.src)
             }
         ]
     },
     plugins: [],
     devServer: {
-        host: host,
-        port: port,
+        host: '0.0.0.0',
+        port: 3000,
         noInfo: true,
-        publicPath: `/${dist}/`
+        publicPath: `/${statics.dist}/`
     }
 };
 
