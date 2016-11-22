@@ -2,7 +2,7 @@
   "name": "react-component-boilerplate",
   "version": "0.0.3",
   "description": "A simple boilerplate for React component development",
-  "main": "./src/main.js",
+  "main": "dist/Component.js",
   "scripts": {
     "server": "webpack-dev-server -d --inline --hot --config webpack.config.dev.babel.js",
     "test": "ava ./test",
