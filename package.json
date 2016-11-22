@@ -4,12 +4,12 @@
   "description": "A simple boilerplate for React component development",
   "main": "dist/Component.js",
   "scripts": {
-    "server": "webpack-dev-server -d --inline --hot --config webpack.config.dev.babel.js",
     "test": "ava ./test",
     "test:watch": "ava --watch ./test",
     "coverage": "cross-env NODE_ENV=test nyc npm test",
-    "build": "webpack -p --config webpack.config.prod.babel.js",
-    "build:dev": "webpack -d --config webpack.config.dev.babel.js"
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "build:dev": "cross-env NODE_ENV=development webpack -d",
+    "server": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot"
   },
   "keywords": [
     "react",
