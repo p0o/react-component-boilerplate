@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Component.scss';
+import styles from './style.scss';
 
 export default class Component extends React.Component {
     static propTypes = {
