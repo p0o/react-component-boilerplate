@@ -8,7 +8,7 @@
 * Modern JavaScript syntax(ES2015+) via [Babel](https://babeljs.io)
 * Style pre-processing via [SASS/SCSS](http://sass-lang.com)
 * Hot Module Replacement via [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-* Test toolchain with [AVA](https://github.com/avajs/ava), [enzyme](https://github.com/airbnb/enzyme) and [nyc](https://github.com/istanbuljs/nyc)
+* Test toolchain with [AVA](https://github.com/avajs/ava), [enzyme](https://github.com/airbnb/enzyme), [sinon](https://github.com/sinonjs/sinon) and [nyc](https://github.com/istanbuljs/nyc)
 
 ## Usage
 
@@ -20,7 +20,7 @@
     npm install
     ```
     - Updating package name, version, description and author in `package.json`
-    - Updating component name in `./webpack.config.base.babel.js` and related file under `./src` to whatever you want.
+    - Updating component name in `./webpack.config.babel.js` and related file under `./src` to whatever you want.
 
 * Start dev server(with LiveReload and HMR)
 
